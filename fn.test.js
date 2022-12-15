@@ -126,3 +126,4 @@ test("3초 후에 받아온 나이는 30", async () => {
     expect(age).toBe(30);
 });
 
+// beforeEach를 사용하면 순서대로 처리하는 것도 가능함.
