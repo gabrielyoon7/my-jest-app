@@ -127,3 +127,20 @@ test("3초 후에 받아온 나이는 30", async () => {
 });
 
 // beforeEach를 사용하면 순서대로 처리하는 것도 가능함.
+
+
+
+
+/**
+ * mock 함수
+ */
+
+const mockFn = jest.fn();
+
+mockFn();
+mockFn(1);
+
+test("함수는 2번 호출됩니다.", () => {
+    console.log(mockFn.mock.calls);
+    expect(mockFn.mock.calls.length).toBe(2);
+})
