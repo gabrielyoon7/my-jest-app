@@ -114,10 +114,15 @@ test("3초 후에 받아온 나이는 30", () => {
 });
 
 // Promise를 이용한 비동기 (resolves, rejects)
-test("3초 후에 받아온 나이는 30", () => {
+test("3초 후에 받아온 나이는 30 (resolves, rejects)", () => {
     //Promise 쓰려면 테스트 함수에서 반드시 return 해줘야 함
     return expect(fn.getAge()).resolves.toBe(30); //rejects도 가능함
 });
 
 
+// async/await을 이용한 
+test("3초 후에 받아온 나이는 30", async () => {
+    const age = await fn.getAge();
+    expect(age).toBe(30);
+});
 
