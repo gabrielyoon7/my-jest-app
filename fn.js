@@ -8,14 +8,14 @@ const fn = {
         const name = "Gabriel";
         setTimeout(() => {
             callback(name);
-        }, 3000);
+        }, 0); // 제대로 테스트하려면 3000으로 수정하기
     },
     getAge: () => {
         const age = 30;
         return new Promise((res, rej) => {
             setTimeout(() => {
                 res(age);
-            }, 3000);
+            }, 0); // 제대로 테스트하려면 3000으로 수정하기
         });
     },
 };
