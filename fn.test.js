@@ -95,3 +95,12 @@ test('이거 에러 남?', () => {
     expect(() => fn.throwErr()).toThrow('xx'); // error 내용 일치 여부도 검사할 수 있음
 });
 
+// 비동기
+
+test("3초 후에 받아온 이름은 Gabriel", (done) => {
+    function callback(name) {
+        expect(name).toBe("Gabriel");
+        done(); //기다려라
+    }
+    fn.getName(callback);
+})

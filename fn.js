@@ -4,5 +4,11 @@ const fn = {
     throwErr: () => {
         throw new Error('xx');
     },
+    getName: callback => {
+        const name = "Gabriel";
+        setTimeout(() => {
+            callback(name);
+        }, 3000);
+    }
 };
 module.exports = fn;
