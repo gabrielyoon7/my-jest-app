@@ -70,3 +70,9 @@ test('비밀번호는 4자리 입니다.', () => {
 test('0.1 더하기 0.2 는 0.3 입니다.', () => {
     expect(fn.add(0.1, 0.2)).toBeCloseTo(0.3); //근사값
 })
+
+// 글자 처리
+
+test('Hello World에 h라는 글자가 있나?', () => {
+    expect('Hello World').toMatch(/h/i);
+})
