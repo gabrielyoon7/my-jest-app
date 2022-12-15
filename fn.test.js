@@ -103,4 +103,21 @@ test("3초 후에 받아온 이름은 Gabriel", (done) => {
         done(); //기다려라
     }
     fn.getName(callback);
-})
+});
+
+// Promise를 이용한 비동기
+test("3초 후에 받아온 나이는 30", () => {
+    //Promise 쓰려면 테스트 함수에서 반드시 return 해줘야 함
+    return fn.getAge().then(age => {
+        expect(age).toBe(30);
+    })
+});
+
+// Promise를 이용한 비동기 (resolves, rejects)
+test("3초 후에 받아온 나이는 30", () => {
+    //Promise 쓰려면 테스트 함수에서 반드시 return 해줘야 함
+    return expect(fn.getAge()).resolves.toBe(30); //rejects도 가능함
+});
+
+
+
