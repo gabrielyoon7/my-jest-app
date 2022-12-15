@@ -76,3 +76,11 @@ test('0.1 더하기 0.2 는 0.3 입니다.', () => {
 test('Hello World에 h라는 글자가 있나?', () => {
     expect('Hello World').toMatch(/h/i);
 })
+
+//toContain
+
+test('유저 리스트에 Gabriel이 있는가?', () => {
+    const user = "Gabriel";
+    const userList = ['Tom', 'Mike', 'Gabriel'];
+    expect(userList).toContain(user);
+})
