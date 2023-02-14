@@ -11,5 +11,6 @@ module.exports = {
   rules: {
     semi: [2, 'always'],
     'linebreak-style': 0,
+    'import/extensions': 0,
   },
 };
