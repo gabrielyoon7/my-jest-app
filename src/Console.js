@@ -1,22 +1,20 @@
-const readline = require('readline');
+import * as readline from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const rl = readline.createInterface({ input, output });
 
 const Console = {
-  read(query) {
-    return new Promise((resolve) => {
-      rl.question(query, (input) => resolve(input));
-    });
+  async read(content) {
+    return await rl.question(content);
   },
-  print(text) {
-    console.log(text);
+
+  print(outputLog) {
+    console.log(outputLog);
   },
+
   close() {
     rl.close();
   },
 };
 
-module.exports = Console;
+export default Console;

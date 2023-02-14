@@ -1,4 +1,4 @@
-const Console = require("./src/Console");
+import Console from "./src/Console.js";
 
 const play = async () => {
     const answer = await Console.read('무엇이든 입력해 보아요.')
